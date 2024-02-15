@@ -1,0 +1,274 @@
+{% extends 'prasath/layouts/main.html' %}
+{% block title %}
+  about
+{% endblock title %} 
+ 
+{% block content %}
+<div class="container" style="margin-top:3%;">
+  <div class="row">
+  <div class="col-12">
+  
+     <hr style="border-color: #f50d0d;">
+</div>
+
+
+<div><span  style="position: absolute;color: red;margin-top: 1%;font-size: 30px;font-weight: 500;width: -1;">About Us</span></div>
+
+
+<style>
+  li {
+list-style: none;
+}
+input[type="radio"] {
+display: none;
+}
+.js-slider {
+position: relative;
+width: 80%;
+height: 100vh;
+margin: 0 auto;
+}
+.js-slider_item {
+position: absolute;
+left: -16%;
+top: 0;
+width: 120%;
+height: 100%;
+padding: 1rem 3rem;
+opacity: 0;
+visibility: hidden;
+transform-origin: right center;
+transform: translate3d(0%, 0%, 0) rotateY(30deg) scaleX(0.95);
+transition: all 1s ease,transform 1s cubic-bezier(0.43, 0.28, 0.51, 1);
+}
+#s-1:checked ~ .js-slider .js-slider_item.img-1,
+#s-2:checked ~ .js-slider .js-slider_item.img-2,
+#s-3:checked ~ .js-slider .js-slider_item.img-3 {
+opacity: 1;
+visibility: visible;
+transform-origin: left center;
+transform: translate3d(0, 0, 0) rotateY(0deg) scaleX(1);
+}
+.js-slider_img {
+width: 111%;
+height: 60%;
+position: relative;
+overflow: hidden;
+}
+.c-img-w-full {
+position: absolute;
+top: 30%;
+left: 50%;
+width: 100%;
+height: auto;
+transform: translate3d(-50%, -50%, 0);
+}
+.c-img-h-full {
+position: absolute;
+top: 30%;
+left: 50%;
+width: 100%;
+height: auto;
+transform: translate3d(-50%, -50%, 0);
+}
+figcaption {
+display: block;
+}
+.wo-h3 {
+margin-top: 3rem;
+margin-bottom: 2rem;
+padding-bottom: 2rem;
+border-bottom: 1px solid #e60012;
+}
+.c-label {
+display: inline-block;
+color: #eee;
+background-color: rgba(139,0,10,0.9);
+line-height: 1;
+padding: 0.5em 0.9em;
+margin-right: 0.5em;
+font-size: 1.4rem;
+font-weight: bold;
+}
+.view-sm {
+display: none;
+}
+.js-slider_nav {
+position: absolute;
+left: 0;
+top: 26%;
+width: 100%;
+transform: translate3d(0, -50%, 0);
+}
+.js-slider_nav_item.prev {
+left: 0;
+}
+.js-slider_nav_item.next {
+right: 0;
+transform: rotateY(180deg);
+}
+.js-slider_nav_item {
+position: absolute;
+display: none;
+width: 4rem;
+height: 4rem;
+border: 1px solid #e60012;
+border-radius: 50%;
+cursor: pointer;
+transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.js-slider_nav_item:before {
+content: "";
+display: block;
+position: absolute;
+left: 1rem;
+top: 45%;
+width: 1rem;
+height: 1px;
+background-color: #e60012;
+transform-origin: left bottom;
+transform: translate3d(0, -50%, 0) rotate(-45deg);
+transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.js-slider_nav_item:hover {
+transform: translate3d(-30%, 0, 0);
+}
+.js-slider_nav_item.next:hover {
+transform: rotateY(180deg) translate3d(-30%, 0, 0);
+}
+.js-slider_nav_item:hover:before {
+transform: translate3d(0, -50%, 0) rotate(-30deg);
+}
+.js-slider_nav_item:after {
+content: "";
+position: absolute;
+top: 45%;
+left: 50%;
+width: 2rem;
+height: 1px;
+background-color: #e60012;
+transform: translate3d(-50%, -50%, 0);
+}
+#s-1:checked ~ .js-slider .js-slider_nav .s-nav-1,
+#s-2:checked ~ .js-slider .js-slider_nav .s-nav-2,
+#s-3:checked ~ .js-slider .js-slider_nav .s-nav-3 {
+display: block;
+margin-left: -15%;
+margin-right: -15%;
+}
+.js-slider_indicator {
+position: absolute;
+left: 0;
+top: 63%;
+width: 100%;
+text-align: center;
+}
+.js-slider-indi {
+position: relative;
+display: inline-block;
+padding: 2rem;
+cursor: pointer;
+}
+.ha_ri{
+  margin-top: 10%;
+}
+.js-slider-indi:after {
+content: "";
+position: absolute;
+top: 10%;
+left: 50%;
+width: 1rem;
+height: 1rem;
+border-radius: 1rem;
+background: #e60012;
+transform: translate3d(-50%, -50%, 0);
+}
+.js-slider-indi:hover:after {
+transform: translate3d(-50%, -50%, 0) scale(1.5);
+transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#s-1:checked ~ .js-slider .js-slider_indicator .indi-1:after,
+#s-2:checked ~ .js-slider .js-slider_indicator .indi-2:after,
+#s-3:checked ~ .js-slider .js-slider_indicator .indi-3:after {
+transform: translate3d(-50%, -50%, 0) scale(2.5);
+}
+ </style>
+ <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    let currentSlide = 1;
+
+    function showSlide(index) {
+      document.getElementById(`s-${currentSlide}`).checked = false;
+      currentSlide = (index % 3) + 1;
+      document.getElementById(`s-${currentSlide}`).checked = true;
+    }
+
+    function nextSlide() {
+      showSlide(currentSlide + 1);
+    }
+
+    setInterval(nextSlide, 2000); // Change to adjust the interval duration (in milliseconds)
+  });
+</script>
+ <div class="ha_ri">
+  <input type="radio" id="s-1" name="slider-control" checked="checked">
+<input type="radio" id="s-2" name="slider-control">
+<input type="radio" id="s-3" name="slider-control">
+<div class="js-slider">
+<figure class="js-slider_item img-1">
+<div class="js-slider_img">
+<img class="c-img-w-full" src="static\picture\download.jpeg" alt="">
+</div>
+<figcaption class="wo-caption">
+<h3 class="wo-h3">
+  <div>Book's and Library's</div>
+  <br class="view-sm mb-s"></h3>
+<ul class="wo-credit">
+  <li>My name is Hariprasath,I am From Tamilnadu, I have Completed My Bsc,computerscience with 80%,2022 passout.</li>
+  <li>Now I Am Pursuing Amc Engineering college banglore,with 76%,2024 passout</li>
+  <li>pythonfullstackdeveloper
+    <span class="c-txt-s">take it smart</span></li>
+</ul>
+</figcaption>
+</figure>
+<figure class="js-slider_item img-2">
+<div class="js-slider_img">
+<img class="c-img-h-full" src="static\picture\download.jpeg" alt=""></div>
+<figcaption class="wo-caption">
+<h3 class="wo-h3">Lab Facilities</h3>
+<ul class="wo-credit">
+  <li>srikanth</li>
+  <li>python</li>
+  <li>python developer</li></ul>
+</figcaption>
+</figure>
+<figure class="js-slider_item img-3">
+<div class="js-slider_img">
+<img class="c-img-h-full" src="static\picture\download.jpeg" alt=""></div>
+<figcaption class="wo-caption">
+<h3 class="wo-h3">Sport's Support</h3>
+<ul class="wo-credit">
+  <li>swethari</li>
+  <li>prasath</li>
+  <li>child</li></ul>
+</figcaption>
+</figure>
+<div class="js-slider_nav">
+<label class="js-slider_nav_item s-nav-1 prev" for="s-3"></label>
+<label class="js-slider_nav_item s-nav-1 next" for="s-2"></label>
+<label class="js-slider_nav_item s-nav-2 prev" for="s-1"></label>
+<label class="js-slider_nav_item s-nav-2 next" for="s-3"></label>
+<label class="js-slider_nav_item s-nav-3 prev" for="s-2"></label>
+<label class="js-slider_nav_item s-nav-3 next" for="s-1"></label>
+</div>
+<div class="js-slider_indicator">
+<div class="js-slider-indi indi-1"></div>
+<div class="js-slider-indi indi-2"></div>
+<div class="js-slider-indi indi-3"></div>
+</div>
+</div>
+</div>
+
+
+
+{% endblock content %}

@@ -1,0 +1,292 @@
+
+
+{% extends 'prasath/layouts/main.html' %}
+
+{% block title %}
+  Event
+{% endblock title %}
+
+{% block content %}
+    <div class="container" style="margin-top:3%;">
+      <div class="row">
+        <div class="col-12">
+          <hr style="border-color: #f50d0d;">
+        </div>
+        <div class="but_ton1">
+          <style>
+            .but_ton1 {
+              position: absolute;
+              margin-top: 5%;
+              width: 90%;
+            }
+            button {
+              padding: 17px 40px;
+              border-radius: 10px;
+              cursor: pointer;
+              border: 0px;
+              background-color: aqua;
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+              font-size: 15px;
+              font-weight: bold;
+            }
+
+            button:hover {
+              letter-spacing: 3px;
+              background-color: #dc5d19;
+              color: #ffffff;
+              box-shadow: #dc5d19 0px 7px 29px 0px;
+            }
+
+            button:active {
+              letter-spacing: 3px;
+              background-color: #dc5d19;
+              color: #ffffff;
+              box-shadow: #dc5d19;
+              transform: translateX(80px);
+            }
+          </style>
+          <button style="width: 15%;" onclick="opentab('Event')"><p class="tab-links active-link" style="margin-left: 6%;" >Event</p></button>
+        </div>
+        <div class="but_ton2">
+          <style>
+            .but_ton2 {
+              position: absolute;
+              margin-top: 10%;
+              width: 90%;
+            }
+            button {
+              padding: 17px 40px;
+              border-radius: 10px;
+              cursor: pointer;
+              border: 0px;
+              background-color: aqua;
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+              font-size: 15px;
+              font-weight: bold;
+            }
+
+            button:hover {
+              letter-spacing: 3px;
+              background-color: #dc5d19;
+              color: #ffffff;
+              box-shadow: #dc5d19 0px 7px 29px 0px;
+            }
+
+            button:active {
+              letter-spacing: 3px;
+              background-color: #dc5d19;
+              color: #ffffff;
+              box-shadow: #dc5d19;
+              transform: translateX(10px);
+            }
+          </style>
+          <button style="width: 15%;" onclick="opentab('Upcoming')"><p style="margin-left: -6%;" class="tab-links">Upcoming</p></button>
+        </div>
+        <div class="but_ton3">
+          <style>
+            .but_ton3 {
+              position: absolute;
+              margin-top: 15%;
+              width: 90%;
+            }
+            button {
+              padding: 17px 40px;
+              border-radius: 10px;
+              border: 0px;
+              background-color: aqua;
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+              font-size: 15px;
+              font-weight: bold;
+              position: absolute;
+            }
+
+            button:hover {
+              letter-spacing: 3px;
+              background-color: #ffffff;
+              color: #1511fa;
+              box-shadow: #dc5d19 0px 7px 29px 0px;
+            }
+
+            button:active {
+              letter-spacing: 3px;
+              background-color: #f50a0a;
+              color: #ffffff;
+              box-shadow: #f00404;
+              transform: translateX(10px);
+            }
+          </style>
+          <button style="width: 15%;" onclick="opentab('Registration')"><p style="margin-left: -16%;" class="tab-links" >Registration</p></button>
+        </div>
+      </div>
+
+      <div class="tab-contents active-tab" id="Event">
+        <button style="margin-left: 25%; margin-top: 3%; padding: 1px 1px; border-radius: 10px; border: 0px; background-color: rgb(255, 115, 0); letter-spacing: 1.5px; text-transform: uppercase; font-weight: bold; position: absolute;">
+          <a style="text-decoration: none;" href="#Hari">
+            <div class="card" style="margin-left: 0%; background-color: rgb(231, 194, 226);">
+              <ul>
+                <li><span><h1 style="margin-left: -10%;">IOT Project</h1></span><br></li>
+                <li><p>This IOT Project Event is very useful for your career.</p></li>
+              </ul>
+            </div>
+          </a>
+
+
+          <button style="margin-left: 25%; margin-top: 20%; padding: 1px 1px; border-radius: 10px; border: 0px; background-color: rgb(255, 115, 0); letter-spacing: 1.5px; text-transform: uppercase; font-weight: bold; position: absolute;">
+            <a style="text-decoration: none;" href="#Hari">
+              <div class="card" style="margin-left: 0%; background-color: rgb(231, 194, 226);">
+                <ul>
+                  <li><span><h1 style="margin-left: -10%;">IOT Project</h1></span><br></li>
+                  <li><p>This IOT Project Event is very useful for your career.</p></li>
+                </ul>
+              </div>
+            </a>
+
+
+            <button style="margin-left: 25%; margin-top: 38%; padding: 1px 1px; border-radius: 10px; border: 0px; background-color: rgb(255, 115, 0); letter-spacing: 1.5px; text-transform: uppercase; font-weight: bold; position: absolute;">
+              <a style="text-decoration: none;" href="#Hari">
+                <div class="card" style="margin-left: 0%; background-color: rgb(231, 194, 226);">
+                  <ul>
+                    <li><span><h1 style="margin-left: -10%;">IOT Project</h1></span><br></li>
+                    <li><p>This IOT Project Event is very useful for your career.</p></li>
+                  </ul>
+                </div>
+              </a>
+          <style>
+            html {
+              scroll-behavior: smooth;
+            }
+
+            .card {
+              border: 1px solid #eb1111;
+              border-radius: 8px;
+              padding: 16px;
+              margin-right: 0;
+              box-shadow: 0 4px 8px rgba(3, 192, 113, 0.1);
+            }
+          </style>
+        </button>
+        <div>
+          <h1 style="position: absolute; margin-top: 100%;">.</h1>
+        </div>
+      </div>
+
+      <div class="tab-contents" id="Upcoming">
+        <button style="margin-left: 25%; margin-top: 3%; padding: 1px 1px; border-radius: 10px; border: 0px; background-color: rgb(255, 115, 0); letter-spacing: 1.5px; text-transform: uppercase; font-weight: bold; position: absolute;">
+          <div class="card" style="margin-left:0%;background-color:rgb(231, 194, 226);">
+            <ul>
+              <li><span><h1 style="margin-left: -10%;">IOT Project</h1></span><br></li>
+              <li><p>This IOT Project Event is very useful for your'e carrier </p></li>
+            </ul>
+          </div>
+        </button>
+        <div>
+          <style>
+            .card {
+              border: 1px solid #eb1111;
+              border-radius: 8px;
+              padding: 16px;
+              margin-right: 0;
+              box-shadow: 0 4px 8px rgba(3, 192, 113, 0.1);
+            }
+          </style>
+        </div>
+      </div>
+
+      <div class="tab-contents" id="Registration" style="height: 50%;">
+        <button1 style="margin-left: 25%; margin-top: 3%; padding: 1px 1px; border-radius: 10px; border: 0px; background-color: rgb(255, 115, 0); letter-spacing: 1.5px; text-transform: uppercase; font-weight: bold; position: absolute;">
+          <div class="card" style="margin-left:0%;background-color:rgb(231, 194, 226);">
+            <ul>
+              <li><span><h1 style="margin-left: -0%;">IOT Project</h1></span><br></li>
+              <li><p>This IOT Project Event is very useful for your'e carrier. </p></li>
+              <li><a class="nav-link" href="{% url 'registration' %}"><p style="margin-left: 65%;"><button style="color: red;">Registration</button></p></a></li>
+              <li><p style="margin-top: 7%;font-size: 70%;margin-left: 30%;">[Registration Must]</p></li>
+              
+            </ul>
+          </div>
+        </button1>
+      </div>
+
+      <div id="Hari" style="margin-top: 55%; position: absolute;">
+        <div class="container">
+          <div class="row">
+            <div class="Hari-col-1">
+              <h1>IOT PROJECT Exhibition</h1>
+              <p>The IOT PROJECT Exhibition in AMC Engineering College</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <style>
+      #Hari {
+        padding: 80px 0;
+        color: #e40a0a;
+      }
+    </style>
+
+    <style>
+      .tab-links {
+        margin-right: 0px;
+        margin-top: -8%;
+        font-size: 18px;
+        font-weight: 1000;
+        cursor: pointer;
+        position: absolute;
+      }
+
+      .tab-links::after {
+        content: '';
+        width: 0;
+        height: 4px;
+        background: #ff004f;
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        transition: 0.5s;
+      }
+
+      .tab-links.active-link::after {
+        width: 100%;
+      }
+
+      .tab-contents ul li {
+        list-style: none;
+        margin: 20px 0;
+      }
+
+      .tab-contents ul li span {
+        color: #6a0022;
+        font-size: 14px;
+      }
+
+      .tab-contents {
+        display: none;
+      }
+
+      .tab-contents.active-tab {
+        display: block;
+      }
+    </style>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+
+{% endblock content %}
